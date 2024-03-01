@@ -14,6 +14,11 @@ RUN cmake -S llvm -B build \
 RUN cmake --build build --parallel 4 --config Release
 RUN cmake --install build --config Release --prefix /usr/local
 
+WORKDIR /root
+RUN rm -rf llvm-project
+
+ENTRYPOINT [ "/bin/bash" ]
+
 # add these env in github action, so we do not need to set them here.
 
 # ENV LIBCLANG_PATH=/usr/local/lib
