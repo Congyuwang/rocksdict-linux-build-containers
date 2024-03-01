@@ -17,8 +17,6 @@ RUN cmake --install build --config Release --prefix /usr/local
 WORKDIR /root
 RUN rm -rf llvm-project
 
-ENTRYPOINT [ "/bin/bash" ]
-
 # add these env in github action, so we do not need to set them here.
 
 # ENV LIBCLANG_PATH=/usr/local/lib
@@ -27,4 +25,4 @@ ENTRYPOINT [ "/bin/bash" ]
 # ENV AR=/usr/local/bin/llvm-ar
 # ENV CFLAGS="-flto=thin -O3"
 # ENV CXXFLAGS="-flto=thin -O3"
-# ENV RUSTFLAGS="-Clinker-plugin-lto -Clinker=/usr/local/bin/clang -Clink-arg=-fuse-ld=/usr/local/bin/ld64.lld"
+# ENV RUSTFLAGS="-Clinker-plugin-lto -Clinker=/usr/local/bin/clang -Clink-arg=-fuse-ld=/usr/local/bin/ld.lld"
