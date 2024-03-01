@@ -7,7 +7,7 @@ RUN git clone --depth 1 --branch llvmorg-17.0.6 https://github.com/llvm/llvm-pro
 WORKDIR /root/llvm-project
 RUN cmake -S llvm -B build \
     -G "Unix Makefiles" \
-    -DLLVM_ENABLE_PROJECTS=clang \
+    -DLLVM_ENABLE_PROJECTS="clang;lld" \
     -DCMAKE_BUILD_TYPE=Release \
     -DLLVM_PARALLEL_COMPILE_JOBS=4 \
     -DLLVM_PARALLEL_LINK_JOBS=4
