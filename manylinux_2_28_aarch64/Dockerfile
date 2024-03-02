@@ -1,4 +1,4 @@
-FROM messense/manylinux_2_28-cross:aarch64
+FROM quay.io/pypa/manylinux_2_28_aarch64
 
 WORKDIR /root
 
