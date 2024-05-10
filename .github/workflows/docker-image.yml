@@ -41,6 +41,6 @@ jobs:
           context: .
           file: ./${{ matrix.image }}/Dockerfile
           push: true
-          tags: congyuwang/${{ matrix.image }}:llvm-17.0.6
-          cache-from: type=registry,ref=congyuwang/${{ matrix.image }}:llvm-17.0.6
+          tags: congyuwang/${{ matrix.image }}:llvm-18.1.5
+          cache-from: type=registry,ref=congyuwang/${{ matrix.image }}:llvm-18.1.5
           cache-to: type=inline
